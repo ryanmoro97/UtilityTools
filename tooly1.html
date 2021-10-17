@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tooly</title>
+</head>
+<body>
+
+<form>
+
+    <span id="prec" >Precision</span>
+    <input style="margin-top: 3px" type="range" id="precision" value ="3" name="points" min="0" max="10" step="1" oninput="changePrecision()" >
+    <span id = "precVal">[3]</span>
+    <hr>
+<h2>Weight</h2>
+<label for ="weight" id = "errmsg1"></label><br>
+<input type="number" id="weight" value = "3" name="val" min="0" oninput="convertWeight();">
+<select name="Units" id="weight1" onchange="convertWeight()">
+    <option value="g" >g</option>
+    <option value="kg" selected>kg</option>
+    <option value="oz">oz</option>
+    <option value="lbs">lb</option>
+</select>
+
+<label for="weight2">=></label>
+<select name="Units" id="weight2" onchange="convertWeight()">
+    <option value="g">g</option>
+    <option value="kg">kg</option>
+    <option value="oz"selected>oz</option>
+    <option value="lbs">lb</option>
+</select>
+= <span id = "weightfinal">0.106 oz</span>
+<br>
+<hr>
+
+
+<h2>Length</h2>
+<label for ="length" id = "errmsg2"></label><br>
+<input type="number" id="length" name="val" value = "73" min="0" oninput="convertLength()">
+<select name="Units" id="length1" onchange="convertLength()">
+    <option value="mm">mm</option>
+    <option value="cm"selected>cm</option>
+    <option value="m">m</option>
+    <option value="km">km</option>
+    <option value="inches">inches</option>
+    <option value="ft">ft</option>
+    <option value="miles">miles</option>
+</select>
+<label for="length2">=></label>
+<select name="Units" id="length2" onchange="convertLength()">
+    <option value="mm">mm</option>
+    <option value="cm">cm</option>
+    <option value="m">m</option>
+    <option value="km">km</option>
+    <option value="inches">inches</option>
+    <option value="ft"selected>ft</option>
+    <option value="miles">miles</option>
+</select>
+= <span id = "lengthfinal">2.395 ft</span>
+<hr>
+
+
+<h2>Area</h2>
+    <label for ="area" id = "errmsg3"></label><br>
+<input type="number" id="area" value = "7" name="val" min="0" oninput="convertArea()">
+<select name="Units" id="area1" onchange="convertArea()">
+    <option value="mm">mm</option>
+    <option value="cm">cm</option>
+    <option value="m"selected>m</option>
+    <option value="km">km</option>
+    <option value="inches">inches</option>
+    <option value="ft">ft</option>
+    <option value="miles">miles</option>
+</select>
+<label for="length2">=></label>
+<select name="Units" id="area2" onchange="convertArea()">
+    <option value="mm">mm</option>
+    <option value="cm">cm</option>
+    <option value="m">m</option>
+    <option value="km">km</option>
+    <option value="inches">inches</option>
+    <option value="ft"selected>ft</option>
+    <option value="miles">miles</option>
+</select>
+= <span id = "areafinal">75.347 ft<sup>2</sup></span>
+<hr>
+
+
+
+<h2>Volume</h2>
+    <label for ="volume" id = "errmsg4"></label><br>
+<input type="number" id="volume" value = "4" name="val" min="0" oninput="convertVolume()">
+<select name="Units" id="volume1" onchange="convertVolume()">
+    <option value="L">L</option>
+    <option value="cup"selected>cup</option>
+    <option value="mm">mm</option>
+    <option value="cm">cm</option>
+    <option value="m">m</option>
+    <option value="inches">inches</option>
+    <option value="ft">ft</option>
+</select>
+
+<label for="volume2">=></label>
+<select name="Units" id="volume2" onchange="convertVolume()">
+    <option value="L">L</option>
+    <option value="cup">cup</option>
+    <option value="mm">mm</option>
+    <option value="cm">cm</option>
+    <option value="m">m</option>
+    <option value="inches">inches</option>
+    <option value="ft">ft</option>
+</select>
+= <span id = "volumefinal">0.946 L</span>
+
+</form>
+
+
+</body>
+</html>

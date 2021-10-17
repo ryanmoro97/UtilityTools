@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mortgage Calc</title>
+</head>
+<body>
+
+<form>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span id = "errmsg7"></span><br>
+    <label for = "homePrice">Home Price </label>
+    <input type="number" style="width: 70px" id="homePrice" value = "650000" min="0" oninput="calculateMortgage()">
+    <span>[$]</span><br><br>
+
+
+    <label for = "downPayment">Down payment</label>
+    <input type="range" id="downPayment" value ="20"  min="0" max="100" step="1" oninput="changeDownPaymentPrice()" >
+    <span id = "downPaymentVal">[20 %]</span><br><br>
+
+    <label for ="loanLength">Loan Length</label>
+    <select name="LoanLength" id="loanLength" onchange="calculateMortgage()">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+        <option value="25">25</option>
+        <option value="30"selected>30</option>
+        <option value="35">35</option>
+    </select>
+    <span id = "loanLengthVal">[years]</span><br><br>
+
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span id = "errmsg8"></span><br>
+    <label for = "interest">Interest</label>
+    <input type="number" style="width: 50px" id="interest" value = "3.25" min="0" oninput="calculateMortgage()">
+    <span>[%]</span><br><br>
+
+    <h3 id = "finalMortgage">Monthly payment: 2756.99</h3>
+    <h3 id = "finalyearly">Yearly payment: 33083.87</h3>
+    <h3 id = "totalpaid">Total payment: 992516.23</h3>
+    <h3 id = "totaltaxes">Total interest/taxes/insurance paid: 342516.23</h3>
+
+    <li>An estimated monthly homeowner insurance and property tax is applied to the provided data</li>
+</form>
+
+
+</body>
+</html>
